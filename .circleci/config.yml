@@ -19,3 +19,4 @@ jobs:
       - run: gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
       - run: docker build --rm=false -t eu.gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:$CIRCLE_SHA1 .
       - run: gcloud docker -- push eu.gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:$CIRCLE_SHA1
+
